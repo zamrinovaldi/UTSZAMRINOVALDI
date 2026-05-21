@@ -27,6 +27,31 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Data Master</div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('rooms.index') }}">
+                    <i class="fas fa-fw fa-bed"></i>
+                    <span>Kamar</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('guests.index') }}">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Tamu</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Transaksi</div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('reservations.index') }}">
+                    <i class="fas fa-fw fa-calendar-check"></i>
+                    <span>Reservasi</span></a>
+            </li>
+
         </ul>
         <!-- End of Sidebar -->
 

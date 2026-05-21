@@ -1,0 +1,29 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Tambah Tamu</h1>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <form action="{{ route('guests.store') }}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label>Nama Lengkap</label>
+                <input type="text" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>No Telepon</label>
+                <input type="text" name="phone_number" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="{{ route('guests.index') }}" class="btn btn-secondary">Batal</a>
+        </form>
+    </div>
+</div>
+@endsection
